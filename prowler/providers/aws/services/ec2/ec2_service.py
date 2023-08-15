@@ -104,6 +104,36 @@ class EC2(AWSService):
             )
             for page in describe_security_groups_paginator.paginate():
                 for sg in page["SecurityGroups"]:
+                    
+                    
+                    
+                    #? ###########################################################
+                    #*                      GM Code
+                    #? ###########################################################
+                    
+                    #* Describe instances associated with this security group
+                    associated_instances_response = regional_client.describe_instances(
+                        #* Filter by the security group's ID
+                        Filters=[
+                            {
+                                'Name': 'instance.group-id',
+                                'Values': [sg['GroupId']]
+                            }
+                        ]
+                    )
+                    #* Flatten the list of reservations and instances
+                    associated_instances = [
+                        instance for reservation in associated_instances_response['Reservations']
+                        for instance in reservation['Instances']
+                    ]
+                    #* Skip this security group if there are no associated EC2 instances
+                    #* This prevents false positives by ignoring security groups without any associated instances
+                    if not associated_instances:
+                        continue
+                    #? ###########################################################
+                    #*                      GM Code Done
+                    #? ###########################################################
+
                     arn = f"arn:{self.audited_partition}:ec2:{regional_client.region}:{self.audited_account}:security-group/{sg['GroupId']}"
                     if not self.audit_resources or (
                         is_resource_filtered(arn, self.audit_resources)
