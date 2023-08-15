@@ -1,0 +1,356 @@
+
+        <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Required meta tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style>
+        .read-more {
+            color: #00f;
+        }
+
+        .bg-success-custom {
+            background-color: #98dea7 !important;
+        }
+
+        .bg-danger {
+            background-color: #f28484 !important;
+        }
+    </style>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!-- https://datatables.net/download/index with jQuery, DataTables, Buttons, SearchPanes, and Select //-->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.datatables.net/v/dt/jqc-1.12.4/dt-1.10.25/b-1.7.1/sp-1.4.0/sl-1.3.3/datatables.min.css" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <style>
+        .show-read-more .more-text {
+            display: none;
+        }
+
+        .dataTable {
+            font-size: 14px;
+        }
+
+        .container-fluid {
+            font-size: 14px;
+        }
+
+        .float-left {
+            float: left !important;
+            max-width: 100%;
+        }
+    </style>
+    <title>Prowler - The Handy Cloud Security Tool</title>
+    </head>
+    <body>
+    <div class="container-fluid">
+        <div class="row mt-3">
+        <div class="col-md-4">
+            <a href=https://github.com/prowler-cloud/prowler/><img class="float-left card-img-left mt-4 mr-4 ml-4"
+                        src=https://user-images.githubusercontent.com/3985464/113734260-7ba06900-96fb-11eb-82bc-d4f68a1e2710.png
+                        alt="prowler-logo"></a>
+            <div class="card">
+            <div class="card-header">
+                Report Information
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                <div class="row">
+                    <div class="col-md-auto">
+                    <b>Version:</b> 3.8.2
+                    </div>
+                </div>
+                </li>
+                <li class="list-group-item">
+                <b>Parameters used:</b> aws --checks ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_elasticsearch_kibana_9200_9300_5601 -f us-east-1 --verbose
+                </li>
+                <li class="list-group-item">
+                <b>Date:</b> 2023-08-15T13:04:56.388001
+                </li>
+            </ul>
+            </div>
+        </div> 
+            <div class="col-md-2">
+                <div class="card">
+                    <div class="card-header">
+                        AWS Assessment Summary
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <b>AWS Account:</b> 425236424417
+                        </li>
+                        <li class="list-group-item">
+                            <b>AWS-CLI Profile:</b> ENV
+                        </li>
+                        <li class="list-group-item">
+                            <b>Audited Regions:</b> us-east-1
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-4">
+            <div class="card">
+                <div class="card-header">
+                    AWS Credentials
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <b>User Id:</b> AIDAWGAQQ43QUCQMTXE5Q
+                        </li>
+                        <li class="list-group-item">
+                            <b>Caller Identity ARN:</b> arn:aws:iam::425236424417:user/Prowler
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="col-md-2">
+            <div class="card">
+                <div class="card-header">
+                    Assessment Overview
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <b>Total Findings:</b> 6
+                    </li>
+                    <li class="list-group-item">
+                        <b>Passed:</b> 1
+                    </li>
+                    <li class="list-group-item">
+                        <b>Failed:</b> 5
+                    </li>
+                    <li class="list-group-item">
+                        <b>Total Resources:</b> 6
+                    </li>
+                </ul>
+            </div>
+        </div>
+        </div>
+        </div>
+        <div class="row-mt-3">
+        <div class="col-md-12">
+            <table class="table compact stripe row-border ordering" id="findingsTable" data-order='[[ 5, "asc" ]]' data-page-length='100'>
+            <thead class="thead-light">
+                <tr>
+                    <th scope="col">Status</th>
+                    <th scope="col">Severity</th>
+                    <th scope="col">Service Name</th>
+                    <th scope="col">Region</th>
+                    <th style="width:20%" scope="col">Check ID</th>
+                    <th style="width:20%" scope="col">Check Title</th>
+                    <th scope="col">Resource ID</th>
+                    <th scope="col">Resource Tags</th>
+                    <th scope="col">Status Extended</th>
+                    <th scope="col">Risk</th>
+                    <th scope="col">Recomendation</th>
+                    <th scope="col">Compliance</th>
+                </tr>
+            </thead>
+            <tbody>
+    
+                <tr class="p-3 mb-2 bg-success-custom">
+                    <td>PASS</td>
+                    <td>high</td>
+                    <td>ec2</td>
+                    <td>us-east-1</td>
+                    <td>ec2<wbr>_securitygroup<wbr>_allow<wbr>_ingress<wbr>_from<wbr>_internet<wbr>_to<wbr>_tcp<wbr>_port<wbr>_elasticsearch<wbr>_kibana<wbr>_9200<wbr>_9300<wbr>_5601</td>
+                    <td>Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to Elasticsearch/Kibana ports.</td>
+                    <td>sg-0574720b7747ba672</td>
+                    <td></td>
+                    <td>Security group default (sg-0574720b7747ba672) does not have Elasticsearch/Kibana ports 9200, 9300 and 5601 open to the Internet.</td>
+                    <td><p class="show-read-more">If Security groups are not properly configured the attack surface is increased.</p></td>
+                    <td><p class="show-read-more">Use a Zero Trust approach. Narrow ingress traffic as much as possible. Consider north-south as well as east-west traffic.</p> <a class="read-more" href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html"><i class="fas fa-external-link-alt"></i></a></td>
+                    <td><p class="show-read-more">
+&#x2022;MITRE-ATTACK: T1199, T1048, T1499, T1498, T1046
+
+&#x2022;AWS-Well-Architected-Framework-Security-Pillar: SEC05-BP03
+</p></td>
+                </tr>
+                
+                <tr class="table-danger">
+                    <td>FAIL</td>
+                    <td>high</td>
+                    <td>ec2</td>
+                    <td>us-east-1</td>
+                    <td>ec2<wbr>_securitygroup<wbr>_allow<wbr>_ingress<wbr>_from<wbr>_internet<wbr>_to<wbr>_tcp<wbr>_port<wbr>_elasticsearch<wbr>_kibana<wbr>_9200<wbr>_9300<wbr>_5601</td>
+                    <td>Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to Elasticsearch/Kibana ports.</td>
+                    <td>sg-02f889a40a7e9fd6f</td>
+                    <td>
+&#x2022;Type=SecGroup
+
+&#x2022;VM=2
+
+&#x2022;ID=sg-02f889a40a7e9fd6f
+</td>
+                    <td>Security group launch-wizard-1 (sg-02f889a40a7e9fd6f) has Elasticsearch/Kibana ports 9200, 9300 and 5601 open to the Internet.</td>
+                    <td><p class="show-read-more">If Security groups are not properly configured the attack surface is increased.</p></td>
+                    <td><p class="show-read-more">Use a Zero Trust approach. Narrow ingress traffic as much as possible. Consider north-south as well as east-west traffic.</p> <a class="read-more" href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html"><i class="fas fa-external-link-alt"></i></a></td>
+                    <td><p class="show-read-more">
+&#x2022;MITRE-ATTACK: T1199, T1048, T1499, T1498, T1046
+
+&#x2022;AWS-Well-Architected-Framework-Security-Pillar: SEC05-BP03
+</p></td>
+                </tr>
+                
+                <tr class="table-danger">
+                    <td>FAIL</td>
+                    <td>high</td>
+                    <td>ec2</td>
+                    <td>us-east-1</td>
+                    <td>ec2<wbr>_securitygroup<wbr>_allow<wbr>_ingress<wbr>_from<wbr>_internet<wbr>_to<wbr>_tcp<wbr>_port<wbr>_elasticsearch<wbr>_kibana<wbr>_9200<wbr>_9300<wbr>_5601</td>
+                    <td>Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to Elasticsearch/Kibana ports.</td>
+                    <td>sg-07b01711468cbf480</td>
+                    <td></td>
+                    <td>Security group allow-kibana (sg-07b01711468cbf480) has Elasticsearch/Kibana ports 9200, 9300 and 5601 open to the Internet.</td>
+                    <td><p class="show-read-more">If Security groups are not properly configured the attack surface is increased.</p></td>
+                    <td><p class="show-read-more">Use a Zero Trust approach. Narrow ingress traffic as much as possible. Consider north-south as well as east-west traffic.</p> <a class="read-more" href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html"><i class="fas fa-external-link-alt"></i></a></td>
+                    <td><p class="show-read-more">
+&#x2022;MITRE-ATTACK: T1199, T1048, T1499, T1498, T1046
+
+&#x2022;AWS-Well-Architected-Framework-Security-Pillar: SEC05-BP03
+</p></td>
+                </tr>
+                
+                <tr class="table-danger">
+                    <td>FAIL</td>
+                    <td>high</td>
+                    <td>ec2</td>
+                    <td>us-east-1</td>
+                    <td>ec2<wbr>_securitygroup<wbr>_allow<wbr>_ingress<wbr>_from<wbr>_internet<wbr>_to<wbr>_tcp<wbr>_port<wbr>_elasticsearch<wbr>_kibana<wbr>_9200<wbr>_9300<wbr>_5601</td>
+                    <td>Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to Elasticsearch/Kibana ports.</td>
+                    <td>sg-0c56461851f9a8168</td>
+                    <td></td>
+                    <td>Security group Test2Attached (sg-0c56461851f9a8168) has Elasticsearch/Kibana ports 9200, 9300 and 5601 open to the Internet.</td>
+                    <td><p class="show-read-more">If Security groups are not properly configured the attack surface is increased.</p></td>
+                    <td><p class="show-read-more">Use a Zero Trust approach. Narrow ingress traffic as much as possible. Consider north-south as well as east-west traffic.</p> <a class="read-more" href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html"><i class="fas fa-external-link-alt"></i></a></td>
+                    <td><p class="show-read-more">
+&#x2022;MITRE-ATTACK: T1199, T1048, T1499, T1498, T1046
+
+&#x2022;AWS-Well-Architected-Framework-Security-Pillar: SEC05-BP03
+</p></td>
+                </tr>
+                
+                <tr class="table-danger">
+                    <td>FAIL</td>
+                    <td>high</td>
+                    <td>ec2</td>
+                    <td>us-east-1</td>
+                    <td>ec2<wbr>_securitygroup<wbr>_allow<wbr>_ingress<wbr>_from<wbr>_internet<wbr>_to<wbr>_tcp<wbr>_port<wbr>_elasticsearch<wbr>_kibana<wbr>_9200<wbr>_9300<wbr>_5601</td>
+                    <td>Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to Elasticsearch/Kibana ports.</td>
+                    <td>sg-00f4456e66ab72432</td>
+                    <td></td>
+                    <td>Security group TestKibana (sg-00f4456e66ab72432) has Elasticsearch/Kibana ports 9200, 9300 and 5601 open to the Internet.</td>
+                    <td><p class="show-read-more">If Security groups are not properly configured the attack surface is increased.</p></td>
+                    <td><p class="show-read-more">Use a Zero Trust approach. Narrow ingress traffic as much as possible. Consider north-south as well as east-west traffic.</p> <a class="read-more" href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html"><i class="fas fa-external-link-alt"></i></a></td>
+                    <td><p class="show-read-more">
+&#x2022;MITRE-ATTACK: T1199, T1048, T1499, T1498, T1046
+
+&#x2022;AWS-Well-Architected-Framework-Security-Pillar: SEC05-BP03
+</p></td>
+                </tr>
+                
+                <tr class="table-danger">
+                    <td>FAIL</td>
+                    <td>high</td>
+                    <td>ec2</td>
+                    <td>us-east-1</td>
+                    <td>ec2<wbr>_securitygroup<wbr>_allow<wbr>_ingress<wbr>_from<wbr>_internet<wbr>_to<wbr>_tcp<wbr>_port<wbr>_elasticsearch<wbr>_kibana<wbr>_9200<wbr>_9300<wbr>_5601</td>
+                    <td>Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to Elasticsearch/Kibana ports.</td>
+                    <td>sg-05a0faac2ed8a2a0a</td>
+                    <td></td>
+                    <td>Security group AllowKibana2 (sg-05a0faac2ed8a2a0a) has Elasticsearch/Kibana ports 9200, 9300 and 5601 open to the Internet.</td>
+                    <td><p class="show-read-more">If Security groups are not properly configured the attack surface is increased.</p></td>
+                    <td><p class="show-read-more">Use a Zero Trust approach. Narrow ingress traffic as much as possible. Consider north-south as well as east-west traffic.</p> <a class="read-more" href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html"><i class="fas fa-external-link-alt"></i></a></td>
+                    <td><p class="show-read-more">
+&#x2022;MITRE-ATTACK: T1199, T1048, T1499, T1498, T1046
+
+&#x2022;AWS-Well-Architected-Framework-Security-Pillar: SEC05-BP03
+</p></td>
+                </tr>
+                
+               </tbody>
+            </table>
+        </div>
+    </div>
+    </div>
+    </div>
+    <!-- Table search and paginator -->
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"
+        integrity="sha384-1CmrxMRARb6aLqgBO7yyAxTOQE2AKb9GfXnEo760AUcUmFx3ibVJJAzGytlQcNXd"
+        crossorigin="anonymous"></script>
+    <!-- https://datatables.net/download/index with jQuery, DataTables, Buttons, SearchPanes, and Select //-->
+    <script type="text/javascript"
+        src="https://cdn.datatables.net/v/dt/jqc-1.12.4/dt-1.10.25/b-1.7.1/sp-1.4.0/sl-1.3.3/datatables.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Initialise the table with 50 rows, and some search/filtering panes
+            $('#findingsTable').DataTable({
+                responsive: true,
+                // Show 25, 50, 100 and All records
+                lengthChange: true,
+                lengthMenu: [[25, 50, 100, -1], [25, 50, 100, "All"]],
+                searchPanes: {
+                    cascadePanes: true,
+                    viewTotal: true,
+                },
+                dom: 'Blfrtip',
+                language: {
+                    // To enable a filter button instead of the filter row
+                    searchPanes: {
+                        clearMessage: 'Clear Filters',
+                        collapse: { 0: 'Filters', _: 'Filters (%d)' },
+                        initCollapsed: true
+
+                    }
+                },
+                buttons: [
+                    {
+                        extend: 'searchPanes',
+                        config: {
+                            cascadePanes: true,
+                            viewTotal: true,
+                            orderable: false
+                        }
+                    }
+                ],
+                columnDefs: [
+                    {
+                        searchPanes: {
+                            show: true,
+                            pagingType: 'numbers',
+                            searching: true
+                        },
+                        // Show all filters
+                        targets: [0, 1, 2, 3, 5, 7]
+                    }
+                ]
+            });
+            var maxLength = 30;
+            // ReadMore ReadLess
+            $(".show-read-more").each(function () {
+                var myStr = $(this).text();
+                if ($.trim(myStr).length > maxLength) {
+                    var newStr = myStr.substring(0, maxLength);
+                    var removedStr = myStr.substring(maxLength, $.trim(myStr).length);
+                    $(this).empty().html(newStr);
+                    $(this).append(' <a href="javascript:void(0);" class="read-more">read more...</a>');
+                    $(this).append('<span class="more-text">' + removedStr + '</span>');
+                }
+            });
+            $(".read-more").click(function () {
+                $(this).siblings(".more-text").contents().unwrap();
+                $(this).remove();
+            });
+        });
+    </script>
+</body>
+
+</html>

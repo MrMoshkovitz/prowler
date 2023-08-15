@@ -1,0 +1,511 @@
+[{
+    "AssessmentStartTime": "2023-08-15T13:06:48.024093",
+    "FindingUniqueId": "prowler-aws-ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_elasticsearch_kibana_9200_9300_5601-425236424417-us-west-2-sg-0c135f51141f4a1cb",
+    "Provider": "aws",
+    "CheckID": "ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_elasticsearch_kibana_9200_9300_5601",
+    "CheckTitle": "Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to Elasticsearch/Kibana ports.",
+    "CheckType": [
+        "Infrastructure Security"
+    ],
+    "ServiceName": "ec2",
+    "SubServiceName": "securitygroup",
+    "Status": "FAIL",
+    "StatusExtended": "Security group AllowingPorts (sg-0c135f51141f4a1cb) has Elasticsearch/Kibana ports 9200, 9300 and 5601 open to the Internet.",
+    "Severity": "high",
+    "ResourceType": "AwsEc2SecurityGroup",
+    "ResourceDetails": "AllowingPorts",
+    "Description": "Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to Elasticsearch/Kibana ports.",
+    "Risk": "If Security groups are not properly configured the attack surface is increased.",
+    "RelatedUrl": "",
+    "Remediation": {
+        "Code": {
+            "NativeIaC": "",
+            "Terraform": "",
+            "CLI": "",
+            "Other": ""
+        },
+        "Recommendation": {
+            "Text": "Use a Zero Trust approach. Narrow ingress traffic as much as possible. Consider north-south as well as east-west traffic.",
+            "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html"
+        }
+    },
+    "Compliance": {
+        "MITRE-ATTACK": [
+            "T1199",
+            "T1048",
+            "T1499",
+            "T1498",
+            "T1046"
+        ],
+        "AWS-Well-Architected-Framework-Security-Pillar": [
+            "SEC05-BP03"
+        ]
+    },
+    "Categories": [
+        "internet-exposed"
+    ],
+    "DependsOn": [],
+    "RelatedTo": [],
+    "Notes": "",
+    "Profile": "ENV",
+    "AccountId": "425236424417",
+    "OrganizationsInfo": null,
+    "Region": "us-west-2",
+    "ResourceId": "sg-0c135f51141f4a1cb",
+    "ResourceArn": "arn:aws:ec2:us-west-2:425236424417:security-group/sg-0c135f51141f4a1cb",
+    "ResourceTags": {
+        "Name": "AllowAll",
+        "User": "admin",
+        "Pasword": "password"
+    }
+},{
+    "AssessmentStartTime": "2023-08-15T13:06:48.024093",
+    "FindingUniqueId": "prowler-aws-ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_elasticsearch_kibana_9200_9300_5601-425236424417-us-west-2-sg-0d4c657e2dbe0666b",
+    "Provider": "aws",
+    "CheckID": "ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_elasticsearch_kibana_9200_9300_5601",
+    "CheckTitle": "Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to Elasticsearch/Kibana ports.",
+    "CheckType": [
+        "Infrastructure Security"
+    ],
+    "ServiceName": "ec2",
+    "SubServiceName": "securitygroup",
+    "Status": "PASS",
+    "StatusExtended": "Security group ALLOW80 (sg-0d4c657e2dbe0666b) does not have Elasticsearch/Kibana ports 9200, 9300 and 5601 open to the Internet.",
+    "Severity": "high",
+    "ResourceType": "AwsEc2SecurityGroup",
+    "ResourceDetails": "ALLOW80",
+    "Description": "Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to Elasticsearch/Kibana ports.",
+    "Risk": "If Security groups are not properly configured the attack surface is increased.",
+    "RelatedUrl": "",
+    "Remediation": {
+        "Code": {
+            "NativeIaC": "",
+            "Terraform": "",
+            "CLI": "",
+            "Other": ""
+        },
+        "Recommendation": {
+            "Text": "Use a Zero Trust approach. Narrow ingress traffic as much as possible. Consider north-south as well as east-west traffic.",
+            "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html"
+        }
+    },
+    "Compliance": {
+        "MITRE-ATTACK": [
+            "T1199",
+            "T1048",
+            "T1499",
+            "T1498",
+            "T1046"
+        ],
+        "AWS-Well-Architected-Framework-Security-Pillar": [
+            "SEC05-BP03"
+        ]
+    },
+    "Categories": [
+        "internet-exposed"
+    ],
+    "DependsOn": [],
+    "RelatedTo": [],
+    "Notes": "",
+    "Profile": "ENV",
+    "AccountId": "425236424417",
+    "OrganizationsInfo": null,
+    "Region": "us-west-2",
+    "ResourceId": "sg-0d4c657e2dbe0666b",
+    "ResourceArn": "arn:aws:ec2:us-west-2:425236424417:security-group/sg-0d4c657e2dbe0666b",
+    "ResourceTags": {}
+},{
+    "AssessmentStartTime": "2023-08-15T13:06:48.024093",
+    "FindingUniqueId": "prowler-aws-ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_elasticsearch_kibana_9200_9300_5601-425236424417-us-west-2-sg-0f4011e9554e40b70",
+    "Provider": "aws",
+    "CheckID": "ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_elasticsearch_kibana_9200_9300_5601",
+    "CheckTitle": "Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to Elasticsearch/Kibana ports.",
+    "CheckType": [
+        "Infrastructure Security"
+    ],
+    "ServiceName": "ec2",
+    "SubServiceName": "securitygroup",
+    "Status": "PASS",
+    "StatusExtended": "Security group KibanaFalsePositive (sg-0f4011e9554e40b70) does not have Elasticsearch/Kibana ports 9200, 9300 and 5601 open to the Internet.",
+    "Severity": "high",
+    "ResourceType": "AwsEc2SecurityGroup",
+    "ResourceDetails": "KibanaFalsePositive",
+    "Description": "Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to Elasticsearch/Kibana ports.",
+    "Risk": "If Security groups are not properly configured the attack surface is increased.",
+    "RelatedUrl": "",
+    "Remediation": {
+        "Code": {
+            "NativeIaC": "",
+            "Terraform": "",
+            "CLI": "",
+            "Other": ""
+        },
+        "Recommendation": {
+            "Text": "Use a Zero Trust approach. Narrow ingress traffic as much as possible. Consider north-south as well as east-west traffic.",
+            "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html"
+        }
+    },
+    "Compliance": {
+        "MITRE-ATTACK": [
+            "T1199",
+            "T1048",
+            "T1499",
+            "T1498",
+            "T1046"
+        ],
+        "AWS-Well-Architected-Framework-Security-Pillar": [
+            "SEC05-BP03"
+        ]
+    },
+    "Categories": [
+        "internet-exposed"
+    ],
+    "DependsOn": [],
+    "RelatedTo": [],
+    "Notes": "",
+    "Profile": "ENV",
+    "AccountId": "425236424417",
+    "OrganizationsInfo": null,
+    "Region": "us-west-2",
+    "ResourceId": "sg-0f4011e9554e40b70",
+    "ResourceArn": "arn:aws:ec2:us-west-2:425236424417:security-group/sg-0f4011e9554e40b70",
+    "ResourceTags": {}
+},{
+    "AssessmentStartTime": "2023-08-15T13:06:48.024093",
+    "FindingUniqueId": "prowler-aws-ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_elasticsearch_kibana_9200_9300_5601-425236424417-us-west-2-sg-037f83383940e74bd",
+    "Provider": "aws",
+    "CheckID": "ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_elasticsearch_kibana_9200_9300_5601",
+    "CheckTitle": "Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to Elasticsearch/Kibana ports.",
+    "CheckType": [
+        "Infrastructure Security"
+    ],
+    "ServiceName": "ec2",
+    "SubServiceName": "securitygroup",
+    "Status": "PASS",
+    "StatusExtended": "Security group default (sg-037f83383940e74bd) does not have Elasticsearch/Kibana ports 9200, 9300 and 5601 open to the Internet.",
+    "Severity": "high",
+    "ResourceType": "AwsEc2SecurityGroup",
+    "ResourceDetails": "default",
+    "Description": "Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to Elasticsearch/Kibana ports.",
+    "Risk": "If Security groups are not properly configured the attack surface is increased.",
+    "RelatedUrl": "",
+    "Remediation": {
+        "Code": {
+            "NativeIaC": "",
+            "Terraform": "",
+            "CLI": "",
+            "Other": ""
+        },
+        "Recommendation": {
+            "Text": "Use a Zero Trust approach. Narrow ingress traffic as much as possible. Consider north-south as well as east-west traffic.",
+            "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html"
+        }
+    },
+    "Compliance": {
+        "MITRE-ATTACK": [
+            "T1199",
+            "T1048",
+            "T1499",
+            "T1498",
+            "T1046"
+        ],
+        "AWS-Well-Architected-Framework-Security-Pillar": [
+            "SEC05-BP03"
+        ]
+    },
+    "Categories": [
+        "internet-exposed"
+    ],
+    "DependsOn": [],
+    "RelatedTo": [],
+    "Notes": "",
+    "Profile": "ENV",
+    "AccountId": "425236424417",
+    "OrganizationsInfo": null,
+    "Region": "us-west-2",
+    "ResourceId": "sg-037f83383940e74bd",
+    "ResourceArn": "arn:aws:ec2:us-west-2:425236424417:security-group/sg-037f83383940e74bd",
+    "ResourceTags": {}
+},{
+    "AssessmentStartTime": "2023-08-15T13:06:48.024093",
+    "FindingUniqueId": "prowler-aws-ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_elasticsearch_kibana_9200_9300_5601-425236424417-us-west-2-sg-0dca45e0b5390a373",
+    "Provider": "aws",
+    "CheckID": "ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_elasticsearch_kibana_9200_9300_5601",
+    "CheckTitle": "Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to Elasticsearch/Kibana ports.",
+    "CheckType": [
+        "Infrastructure Security"
+    ],
+    "ServiceName": "ec2",
+    "SubServiceName": "securitygroup",
+    "Status": "PASS",
+    "StatusExtended": "Security group KibanaNeew (sg-0dca45e0b5390a373) does not have Elasticsearch/Kibana ports 9200, 9300 and 5601 open to the Internet.",
+    "Severity": "high",
+    "ResourceType": "AwsEc2SecurityGroup",
+    "ResourceDetails": "KibanaNeew",
+    "Description": "Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to Elasticsearch/Kibana ports.",
+    "Risk": "If Security groups are not properly configured the attack surface is increased.",
+    "RelatedUrl": "",
+    "Remediation": {
+        "Code": {
+            "NativeIaC": "",
+            "Terraform": "",
+            "CLI": "",
+            "Other": ""
+        },
+        "Recommendation": {
+            "Text": "Use a Zero Trust approach. Narrow ingress traffic as much as possible. Consider north-south as well as east-west traffic.",
+            "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html"
+        }
+    },
+    "Compliance": {
+        "MITRE-ATTACK": [
+            "T1199",
+            "T1048",
+            "T1499",
+            "T1498",
+            "T1046"
+        ],
+        "AWS-Well-Architected-Framework-Security-Pillar": [
+            "SEC05-BP03"
+        ]
+    },
+    "Categories": [
+        "internet-exposed"
+    ],
+    "DependsOn": [],
+    "RelatedTo": [],
+    "Notes": "",
+    "Profile": "ENV",
+    "AccountId": "425236424417",
+    "OrganizationsInfo": null,
+    "Region": "us-west-2",
+    "ResourceId": "sg-0dca45e0b5390a373",
+    "ResourceArn": "arn:aws:ec2:us-west-2:425236424417:security-group/sg-0dca45e0b5390a373",
+    "ResourceTags": {}
+},{
+    "AssessmentStartTime": "2023-08-15T13:06:48.024093",
+    "FindingUniqueId": "prowler-aws-ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_elasticsearch_kibana_9200_9300_5601-425236424417-us-west-2-sg-0907071146df497c7",
+    "Provider": "aws",
+    "CheckID": "ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_elasticsearch_kibana_9200_9300_5601",
+    "CheckTitle": "Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to Elasticsearch/Kibana ports.",
+    "CheckType": [
+        "Infrastructure Security"
+    ],
+    "ServiceName": "ec2",
+    "SubServiceName": "securitygroup",
+    "Status": "FAIL",
+    "StatusExtended": "Security group FinKib (sg-0907071146df497c7) has Elasticsearch/Kibana ports 9200, 9300 and 5601 open to the Internet.",
+    "Severity": "high",
+    "ResourceType": "AwsEc2SecurityGroup",
+    "ResourceDetails": "FinKib",
+    "Description": "Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to Elasticsearch/Kibana ports.",
+    "Risk": "If Security groups are not properly configured the attack surface is increased.",
+    "RelatedUrl": "",
+    "Remediation": {
+        "Code": {
+            "NativeIaC": "",
+            "Terraform": "",
+            "CLI": "",
+            "Other": ""
+        },
+        "Recommendation": {
+            "Text": "Use a Zero Trust approach. Narrow ingress traffic as much as possible. Consider north-south as well as east-west traffic.",
+            "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html"
+        }
+    },
+    "Compliance": {
+        "MITRE-ATTACK": [
+            "T1199",
+            "T1048",
+            "T1499",
+            "T1498",
+            "T1046"
+        ],
+        "AWS-Well-Architected-Framework-Security-Pillar": [
+            "SEC05-BP03"
+        ]
+    },
+    "Categories": [
+        "internet-exposed"
+    ],
+    "DependsOn": [],
+    "RelatedTo": [],
+    "Notes": "",
+    "Profile": "ENV",
+    "AccountId": "425236424417",
+    "OrganizationsInfo": null,
+    "Region": "us-west-2",
+    "ResourceId": "sg-0907071146df497c7",
+    "ResourceArn": "arn:aws:ec2:us-west-2:425236424417:security-group/sg-0907071146df497c7",
+    "ResourceTags": {
+        "Name": "FinKib"
+    }
+},{
+    "AssessmentStartTime": "2023-08-15T13:06:48.024093",
+    "FindingUniqueId": "prowler-aws-ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_elasticsearch_kibana_9200_9300_5601-425236424417-us-west-2-sg-066da553bbc29f5da",
+    "Provider": "aws",
+    "CheckID": "ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_elasticsearch_kibana_9200_9300_5601",
+    "CheckTitle": "Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to Elasticsearch/Kibana ports.",
+    "CheckType": [
+        "Infrastructure Security"
+    ],
+    "ServiceName": "ec2",
+    "SubServiceName": "securitygroup",
+    "Status": "PASS",
+    "StatusExtended": "Security group vulny-rds-security-group (sg-066da553bbc29f5da) does not have Elasticsearch/Kibana ports 9200, 9300 and 5601 open to the Internet.",
+    "Severity": "high",
+    "ResourceType": "AwsEc2SecurityGroup",
+    "ResourceDetails": "vulny-rds-security-group",
+    "Description": "Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to Elasticsearch/Kibana ports.",
+    "Risk": "If Security groups are not properly configured the attack surface is increased.",
+    "RelatedUrl": "",
+    "Remediation": {
+        "Code": {
+            "NativeIaC": "",
+            "Terraform": "",
+            "CLI": "",
+            "Other": ""
+        },
+        "Recommendation": {
+            "Text": "Use a Zero Trust approach. Narrow ingress traffic as much as possible. Consider north-south as well as east-west traffic.",
+            "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html"
+        }
+    },
+    "Compliance": {
+        "MITRE-ATTACK": [
+            "T1199",
+            "T1048",
+            "T1499",
+            "T1498",
+            "T1046"
+        ],
+        "AWS-Well-Architected-Framework-Security-Pillar": [
+            "SEC05-BP03"
+        ]
+    },
+    "Categories": [
+        "internet-exposed"
+    ],
+    "DependsOn": [],
+    "RelatedTo": [],
+    "Notes": "",
+    "Profile": "ENV",
+    "AccountId": "425236424417",
+    "OrganizationsInfo": null,
+    "Region": "us-west-2",
+    "ResourceId": "sg-066da553bbc29f5da",
+    "ResourceArn": "arn:aws:ec2:us-west-2:425236424417:security-group/sg-066da553bbc29f5da",
+    "ResourceTags": {}
+},{
+    "AssessmentStartTime": "2023-08-15T13:06:48.024093",
+    "FindingUniqueId": "prowler-aws-ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_elasticsearch_kibana_9200_9300_5601-425236424417-us-west-2-sg-0e15981685e6073a2",
+    "Provider": "aws",
+    "CheckID": "ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_elasticsearch_kibana_9200_9300_5601",
+    "CheckTitle": "Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to Elasticsearch/Kibana ports.",
+    "CheckType": [
+        "Infrastructure Security"
+    ],
+    "ServiceName": "ec2",
+    "SubServiceName": "securitygroup",
+    "Status": "PASS",
+    "StatusExtended": "Security group default (sg-0e15981685e6073a2) does not have Elasticsearch/Kibana ports 9200, 9300 and 5601 open to the Internet.",
+    "Severity": "high",
+    "ResourceType": "AwsEc2SecurityGroup",
+    "ResourceDetails": "default",
+    "Description": "Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to Elasticsearch/Kibana ports.",
+    "Risk": "If Security groups are not properly configured the attack surface is increased.",
+    "RelatedUrl": "",
+    "Remediation": {
+        "Code": {
+            "NativeIaC": "",
+            "Terraform": "",
+            "CLI": "",
+            "Other": ""
+        },
+        "Recommendation": {
+            "Text": "Use a Zero Trust approach. Narrow ingress traffic as much as possible. Consider north-south as well as east-west traffic.",
+            "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html"
+        }
+    },
+    "Compliance": {
+        "MITRE-ATTACK": [
+            "T1199",
+            "T1048",
+            "T1499",
+            "T1498",
+            "T1046"
+        ],
+        "AWS-Well-Architected-Framework-Security-Pillar": [
+            "SEC05-BP03"
+        ]
+    },
+    "Categories": [
+        "internet-exposed"
+    ],
+    "DependsOn": [],
+    "RelatedTo": [],
+    "Notes": "",
+    "Profile": "ENV",
+    "AccountId": "425236424417",
+    "OrganizationsInfo": null,
+    "Region": "us-west-2",
+    "ResourceId": "sg-0e15981685e6073a2",
+    "ResourceArn": "arn:aws:ec2:us-west-2:425236424417:security-group/sg-0e15981685e6073a2",
+    "ResourceTags": {}
+},{
+    "AssessmentStartTime": "2023-08-15T13:06:48.024093",
+    "FindingUniqueId": "prowler-aws-ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_elasticsearch_kibana_9200_9300_5601-425236424417-us-west-2-sg-045a69c780a3eb0bd",
+    "Provider": "aws",
+    "CheckID": "ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_elasticsearch_kibana_9200_9300_5601",
+    "CheckTitle": "Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to Elasticsearch/Kibana ports.",
+    "CheckType": [
+        "Infrastructure Security"
+    ],
+    "ServiceName": "ec2",
+    "SubServiceName": "securitygroup",
+    "Status": "PASS",
+    "StatusExtended": "Security group Database Security Group (sg-045a69c780a3eb0bd) does not have Elasticsearch/Kibana ports 9200, 9300 and 5601 open to the Internet.",
+    "Severity": "high",
+    "ResourceType": "AwsEc2SecurityGroup",
+    "ResourceDetails": "Database Security Group",
+    "Description": "Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to Elasticsearch/Kibana ports.",
+    "Risk": "If Security groups are not properly configured the attack surface is increased.",
+    "RelatedUrl": "",
+    "Remediation": {
+        "Code": {
+            "NativeIaC": "",
+            "Terraform": "",
+            "CLI": "",
+            "Other": ""
+        },
+        "Recommendation": {
+            "Text": "Use a Zero Trust approach. Narrow ingress traffic as much as possible. Consider north-south as well as east-west traffic.",
+            "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html"
+        }
+    },
+    "Compliance": {
+        "MITRE-ATTACK": [
+            "T1199",
+            "T1048",
+            "T1499",
+            "T1498",
+            "T1046"
+        ],
+        "AWS-Well-Architected-Framework-Security-Pillar": [
+            "SEC05-BP03"
+        ]
+    },
+    "Categories": [
+        "internet-exposed"
+    ],
+    "DependsOn": [],
+    "RelatedTo": [],
+    "Notes": "",
+    "Profile": "ENV",
+    "AccountId": "425236424417",
+    "OrganizationsInfo": null,
+    "Region": "us-west-2",
+    "ResourceId": "sg-045a69c780a3eb0bd",
+    "ResourceArn": "arn:aws:ec2:us-west-2:425236424417:security-group/sg-045a69c780a3eb0bd",
+    "ResourceTags": {}
+}]
