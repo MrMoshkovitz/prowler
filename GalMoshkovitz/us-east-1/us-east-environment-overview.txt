@@ -1,0 +1,22 @@
+Instances: 2
+Security Groups: 6
+Violation Security Groups: 5
+Should be in report: 4
+
+
+Instance 1: i-07e399d78630ca408 (vm1)
+
+Security Groups: 2
+sg-07b01711468cbf480 (allow-kibana) 
+sg-05a0faac2ed8a2a0a (AllowKibana2)
+
+Instance 2: i-08b02ec5c61a9181b (vm2)
+
+Security Groups: 2
+sg-07b01711468cbf480 (allow-kibana) 
+sg-02f889a40a7e9fd6f (launch-wizard-1)
+ sg-0c56461851f9a8168 (Test2Attached)
+
+
+Total Security Groups: 4 (allow-kibana duplicate)
+
