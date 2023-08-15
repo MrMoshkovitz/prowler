@@ -27,7 +27,7 @@ version = "3.8.2"
 [tool.poetry.dependencies]
 alive-progress = "3.1.4"
 awsipranges = "0.3.3"
-azure-identity = "1.13.0"
+azure-identity = "1.14.0"
 azure-mgmt-authorization = "4.0.0"
 azure-mgmt-security = "5.0.0"
 azure-mgmt-sql = "3.0.1"
@@ -38,10 +38,10 @@ boto3 = "1.26.165"
 botocore = "1.29.165"
 colorama = "0.4.6"
 detect-secrets = "1.4.0"
-google-api-python-client = "2.95.0"
+google-api-python-client = "2.96.0"
 google-auth-httplib2 = "^0.1.0"
 mkdocs = {version = "1.5.2", optional = true}
-mkdocs-material = {version = "9.1.20", optional = true}
+mkdocs-material = {version = "9.1.21", optional = true}
 msgraph-core = "0.2.2"
 pydantic = "1.10.12"
 python = "^3.9"
@@ -56,7 +56,7 @@ docs = ["mkdocs", "mkdocs-material"]
 [tool.poetry.group.dev.dependencies]
 bandit = "1.7.5"
 black = "22.12.0"
-coverage = "7.2.7"
+coverage = "7.3.0"
 docker = "6.1.3"
 flake8 = "6.1.0"
 freezegun = "1.2.2"
@@ -69,7 +69,7 @@ pytest-randomly = "3.13.0"
 pytest-xdist = "3.3.1"
 safety = "2.3.5"
 sure = "2.0.1"
-vulture = "2.7"
+vulture = "2.8"
 
 [tool.poetry.scripts]
 prowler = "prowler.__main__:prowler"
