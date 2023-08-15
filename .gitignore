@@ -50,3 +50,5 @@ junit-reports/
 # Coverage
 .coverage*
 coverage*
+
+AWS.env
